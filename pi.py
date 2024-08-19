@@ -4,4 +4,10 @@ text = """
 """
 
 # TODO
-
+import re
+cleaned_string = re.sub(r'[,.]', '', text)
+words = cleaned_string.split()
+pi=''
+for i in list(map(len, words)):
+    pi += str(i)
+print(pi)
