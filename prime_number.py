@@ -1,35 +1,25 @@
-a=61
-#割る数
-i=2
-#素数判定の数
-flag=0
-while i<a:
-    if a%i==0:
-        flag=1
-        break
-    else:
-        i+=1
-if flag==0:
-    print('素数ではない')
-else:
-    print('素数である')    
+def judge(n):
+    i=2#割る数
+    flag=0#判定フラグ
 
-a=10
-#割る数
-i=2
-#素数判定の数
-flag=0
-while i<a:
-    if a%i==0:
-        flag=1
-        break
-    else:
-        i+=1
-if flag==0:
-    print('素数ではない')
-else:
-    print('素数である')    
+    while i < n:
+        if n%i == 0:
+            flag = 1
+            break
+        else :
+            i += 1    
+    if flag==0:
+        return True
+    else:        
+        return False
     
-
-
-# TODO
+k=judge(61)
+if k:
+        print('素数です')
+else:
+        print('素数ではない')
+k = judge(10)
+if k:
+        print('素数です')
+else:
+        print('素数ではない')           
